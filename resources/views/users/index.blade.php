@@ -1,3 +1,9 @@
+@extends('layouts.app')
+
+@section('title', 'Listagem dos Usuários')
+
+@section('content')
+
 <h1>Listagem dos usuários</h1>
 
 <ul>
@@ -8,3 +14,5 @@
       </li>
   @endforeach
 </ul>
+    
+@endsection
