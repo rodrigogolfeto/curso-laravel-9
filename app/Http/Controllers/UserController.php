@@ -16,7 +16,13 @@ class UserController extends Controller
     }
 
     public function show($id){
-        // return view('users.index');
-        dd('users.show',$id);
+        // $user = User::where('id',$id)->get()->first();
+        // $user = User::find($id);
+
+        if(!$user = User::find($id))
+            // return redirect()->back();
+            return redirect()->route('users.index');
+        
+        return view('users.show',compact('user'));
     }
 }
