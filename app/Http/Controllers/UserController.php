@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\StoreUpdateUserFormRequest;
 use App\Models\User;
 use Illuminate\Http\Request;
 
@@ -30,7 +31,7 @@ class UserController extends Controller
         return view('users.create');
     }
 
-    public function store(Request $request){
+    public function store(StoreUpdateUserFormRequest $request){
 
         // $user = new User;
         // $user->name = $request->name;
